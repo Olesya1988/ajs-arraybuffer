@@ -1,16 +1,17 @@
 export default class Maths {
-  constructor(name, type) {
+  constructor(name, type, stoned) {
     this.name = name;
     this.type = type;
     this.attack = undefined;
+    this._stoned = stoned;
   }
 
-  setStoned() {
-    this.stoned = true;
+  set stoned(updatedStoned) {
+    this._stoned = updatedStoned;
   }
 
-  getStoned() {
-    return this.stoned;
+  get stoned() {
+    return this._stoned;
   }
 
   setAttack(distance) {
